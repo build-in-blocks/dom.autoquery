@@ -1,1 +1,1 @@
-# DOM.autoquery
+# @build-in-blocks/dom.autoquery
