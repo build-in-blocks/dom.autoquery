@@ -1,13 +1,7 @@
-import {
-  DeviceSizeBreakpointModified,
-  ActiveDevice,
-} from '../types/modified.types';
+import { DeviceSizeBreakpointModified, ActiveDevice } from '../types/modified.types';
 import { DOMautoqueryDevices } from '../types/user.app.types';
 
-export const breakpointsWatcher = (
-  devices: DOMautoqueryDevices,
-  callback: (activeDevice: ActiveDevice) => void,
-) => {
+export const breakpointsWatcher = (devices: DOMautoqueryDevices, callback: (activeDevice: ActiveDevice) => void) => {
   //--------------------------------------------------------------------------
   // Convert object to a sorted array to ensure we calculate ranges correctly
   //--------------------------------------------------------------------------
