@@ -1,5 +1,10 @@
 # @build-in-blocks/dom.autoquery
 
+> [!NOTE]  
+> Please check back on **April 5, 2026** (which is the end of this sprint's release window), the code and documentation will be merged by then for you to access. 
+>
+> You can follow the progress the pull request tab, or via the release & sprint planning tab of this GitHub project board: https://github.com/orgs/build-in-blocks/projects/2/views/6
+
 #
 
 ### Contributors
