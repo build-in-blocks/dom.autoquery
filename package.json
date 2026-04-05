@@ -2,15 +2,31 @@
   "name": "@build-in-blocks/dom.autoquery",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./build/index.js",
+  "module": "./dist.prod/index.js",
+  "types": "./build/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js",
+      "module": "./build/index.js"
+    }
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
+    "dev": "npx @build-in-blocks/dev.build@1.0.0 dev:build",
+    "build": "npm-run-all --parallel build:prod build:dist:prod",
+    "build:prod": "npx @build-in-blocks/dev.build@1.0.0 prod:build",
+    "build:dist:prod": "rimraf ./dist.prod && tsc -p tsconfig.build.json",
     "eslint:lint": "eslint .",
     "prettier:format": "prettier --write \"**/*.{js,ts,css,html}\"",
     "prepare": "husky"
   },
+  "dependencies": {},
   "devDependencies": {
     "@build-in-blocks/dev.setup": "^1.0.2",
     "@eslint/js": "^10.0.1",
@@ -18,8 +34,9 @@
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.8.1",
-    "typescript": "^5.9.3",
+    "rimraf": "^6.1.3",
     "typescript-eslint": "^8.57.0"
   },
   "homepage": "https://github.com/build-in-blocks/dom.autoquery#readme",
@@ -49,5 +66,9 @@
     "javascript",
     "node"
   ],
-  "files": []
+  "files": [
+    "build/",
+    "dist.prod/",
+    "README.md"
+  ]
 }

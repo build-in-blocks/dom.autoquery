@@ -1,0 +1,24 @@
+//--------------------------------
+// Config for dist.prod operations
+//--------------------------------
+{
+  "compilerOptions": {
+    "outDir": "./dist.prod",
+    "rootDir": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    //-
+    // Fix depreciation (TS5107):
+    "moduleResolution": "bundler", 
+    "allowSyntheticDefaultImports": true,
+    //-
+    "declaration": true,           // Generates .d.ts files for types
+    "sourceMap": false,            // Keep it small for production
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "removeComments": false, // CRITICAL: This must be false
+    "preserveConstEnums": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
