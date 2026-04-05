@@ -7,6 +7,8 @@ node_modules
 .npmrc
 
 # compiled output
+.build-in-blocks
+dist.prod
 /dist
 /build
 
