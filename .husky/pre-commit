@@ -1,1 +1,0 @@
-npx lint-staged --config node_modules/@build-in-blocks/dev.setup/lint-staged.config.js
