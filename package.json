@@ -1,0 +1,47 @@
+{
+  "name": "@build-in-blocks/dom.autoquery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "eslint:lint": "eslint .",
+    "prettier:format": "prettier --write \"**/*.{mjs,ts,js,json,html,css,scss}\"",
+    "prepare": "blocks.pkg.dev.setup dev:husky:setup:git"
+  },
+  "devDependencies": {
+    "@build-in-blocks/dev.resources": "1.0.4",
+    "@build-in-blocks/dev.setup": "1.0.5",
+    "typescript": "^5.9.3"
+  },
+  "homepage": "https://github.com/build-in-blocks/dom.autoquery#readme",
+  "bugs": {
+    "url": "https://github.com/build-in-blocks/product-issue-reports/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/build-in-blocks/dom.autoquery.git"
+  },
+  "license": "AGPL-3.0",
+  "author": "Mary Obiagba",
+  "contributors": [
+    "Find list of contributors in project README: https://github.com/build-in-blocks/dom.autoquery?tab=readme-ov-file#contributors"
+  ],
+  "keywords": [
+    "@build-in-blocks",
+    "@build-in-blocks/dom.autoquery",
+    "dom.autoquery",
+    "build-in-blocks",
+    "blocks",
+    "framework",
+    "library",
+    "package",
+    "",
+    "typescript",
+    "javascript",
+    "node"
+  ],
+  "files": []
+}
