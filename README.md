@@ -18,6 +18,7 @@
   <tbody>
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/Ifycode"><img src="https://avatars.githubusercontent.com/u/45185388?v=4?s=100" width="100px;" alt="Mary @Ifycode"/><br /><sub><b>Mary @Ifycode</b></sub></a><br /><a href="https://github.com/build-in-blocks/dom.autoquery/commits?author=ifycode" title="Code">💻</a> <a href="https://github.com/build-in-blocks/dom.autoquery/commits?author=ifycode" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/apps/allcontributors"><img src="https://avatars.githubusercontent.com/in/23186?v=4?s=100" width="100px;" alt="allcontributors[bot]"/><br /><sub><b>allcontributors[bot]</b></sub></a><br /><a href="#tool-allcontributors[bot]" title="Tools">🔧</a> <a href="https://github.com/build-in-blocks/dom.autoquery/commits?author=allcontributors[bot]" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
