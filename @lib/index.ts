@@ -1,17 +1,15 @@
-export const DOMautoquery = {
-  quickTest: async () => {
-    const { dummyConsole } = await import(
-      /* webpackChunkName: "dummy-1.console" */
-      /* webpackExclude: /\.d\.ts$/ */
-      './dummy-1/console'
-    );
-    dummyConsole();
+import { ActiveDevice } from '@_types/modified.types';
+import { DOMautoqueryDevices } from '@_types/user.app.types';
+import { breakpointsWatcher } from '@_watcher/breakpoints.watcher';
 
-    const { dummyExample } = await import(
-      /* webpackChunkName: "dummy-2.example" */
-      /* webpackExclude: /\.d\.ts$/ */
-      './dummy-2/example'
-    );
-    dummyExample();
+export const DOMautoquery = {
+  devices: async (_devices: DOMautoqueryDevices) => {
+    //-----------------------
+    // Use breakpoint watcher
+    //-----------------------
+    breakpointsWatcher(_devices, (activeDevice: ActiveDevice) => {
+      console.clear();
+      console.log('Active Device:', activeDevice);
+    });
   },
 };
