@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist.prod",
+    "rootDir": "./@lib",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "sourceMap": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "preserveConstEnums": true
+  },
+  "include": ["@lib/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}

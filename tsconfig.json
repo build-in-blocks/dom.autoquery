@@ -1,0 +1,10 @@
+{
+  "extends": "@build-in-blocks/dev.build/tsconfig.base.json",
+  "compilerOptions": {
+    "declarationDir": "./build",
+    "rootDir": "./@lib",
+    "checkJs": false,
+    "skipLibCheck": true
+  },
+  "include": ["@lib"]
+}
