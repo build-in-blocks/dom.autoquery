@@ -18,7 +18,10 @@
     "paths": {
       "@/*": ["./@lib/*"],
       "@_types/*": ["./@lib/types/*"],
-      "@_watcher/*": ["./@lib/watcher/*"]
+      "@_watcher/*": ["./@lib/watcher/*"],
+      "@_helpers/*": ["./@lib/helpers/*"],
+      "@_state/*": ["./@lib/helpers/state/*"],
+      "@_queries/*": ["./@lib/queries/*"]
     }
   },
   "include": ["@lib/**/*"],
