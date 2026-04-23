@@ -17,6 +17,32 @@ More info on **@build-in-blocks** framework libraries in general can be found at
 
 #
 
+### Media query `unit` default and changing to your preferred unit
+
+The `unit` property can have any of the 3 values `px`, `em` or `rem`. When the `unit` property is not specified, the value is set to `px` by default (i.e. if your preferred media query unit is `px`, then you don't need to add the `unit` property).
+
+Here's an example where the preference is the `em` unit:
+
+
+````ts
+import { DOMautoquery } from '@build-in-blocks/dom.autoquery';
+
+DOMautoquery.devices({
+  unit: 'em',
+  //-------------------------------------------------------
+  // Specify as little or as much device sizes as you need.
+  // Update the sizes (names & startpoints) as you see fit.
+  //-------------------------------------------------------
+  sizes: {
+    1: { name: 'small', startPoint: 0},
+    2: { name: 'medium', startPoint: 48 },
+    3: { name: 'large', startPoint: 64 },
+  },
+});
+````
+
+#
+
 ### Swaping `_replacesibling` and `_refelem` elements
 
 Syntax:
