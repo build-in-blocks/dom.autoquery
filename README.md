@@ -71,7 +71,10 @@ For example:
 import { DOMautoquery } from '@build-in-blocks/dom.autoquery';
 
 DOMautoquery.devices({
-  unit: 'px', // default unit is 'px', if you don't specify the unit
+  //-------------------------------------------------------
+  // Specify as little or as much device sizes as you want.
+  // Update the sizes (names & startpoints) as you see fit.
+  //-------------------------------------------------------
   sizes: {
     1: { name: 'mobile', startPoint: 0},
     2: { name: 'tablet', startPoint: 768 },

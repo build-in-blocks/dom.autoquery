@@ -2,6 +2,10 @@ import { DeviceSizeBreakpointModified, ActiveDevice } from '@_types/modified.typ
 import { DOMautoqueryDevices } from '@_types/user.app.types';
 
 export const breakpointsWatcher = (devices: DOMautoqueryDevices, callback: (activeDevice: ActiveDevice) => void) => {
+  // ----------------------------------------------------
+  // Default to 'px' if unit is not specified by dev user
+  // ----------------------------------------------------
+  devices.unit = devices.unit || 'px';
   //--------------------------------------------------------------------------
   // Convert object to a sorted array to ensure we calculate ranges correctly
   //--------------------------------------------------------------------------
