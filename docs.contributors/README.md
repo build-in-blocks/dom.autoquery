@@ -40,7 +40,7 @@ Follow the instructions to fork and clone this repository locally unto your comp
 
 - **Folder structure:** On your computer, create a new parent folder or go to an existing folder that you will like to be the parent, for both this library and your typescript web app. Make sure your cloned `dom.autoquery` repo folder and your typescript web app are inside the parent folder, so that the structure looks like this:
 
-    ````
+    ````bash
     PARENT-FOLDER/
     ├── dom.autoquery/
     └── your-typescript-web-app/
@@ -50,29 +50,29 @@ Follow the instructions to fork and clone this repository locally unto your comp
 
     Install dependencies:
 
-    ```
+    ````bash
     npm install
-    ```
+    ````
 
     Link library:
 
-    ```
+    ````bash
     npm link
-    ```
+    ````
 
-- **For your typescript web app:** Open a terminal specifically for your typescript web app, cd into the root of your typescript web app.
+- **For your typescript web app:** Open a terminal specifically for your typescript web app, `cd` into the root of your typescript web app.
     - **Step 1:** First install the npm dependencies in your typescript web app.
-    - **Step 2:** Add this to your typescript web app's package.json dependencies (take note incase library version changes in the future: use the exact version number in the `@build-in-blocks/dom.autoquery` library's `package.json`. At the time of writing, it is 1.0.0):
+    - **Step 2:** Add this to your typescript web app's `package.json` dependencies (take note incase library version changes in the future: use the exact version number in the `@build-in-blocks/dom.autoquery` library's `package.json`. At the time of writing, it is 1.0.0):
 
-        ```
+        ````json
         "@build-in-blocks/dom.autoquery": "1.0.0"
-        ```
+        ````
 
         Link your app to the library:
 
-        ```
+        ````bash
         npm link ../dom.autoquery
-        ```
+        ````
 
     - **Step 3:** Follow the usage instructions in the [root README.md](https://github.com/build-in-blocks/dom.autoquery), not from the beginning though; start from the **2. Do I need to install `typescript`?** section (and continue till the end).
 
