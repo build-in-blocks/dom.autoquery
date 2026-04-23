@@ -1,7 +1,7 @@
 
 # User guide: Package installation, setup and usage
 
-**TODO:** Add intro
+The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for adding and removing elements from the DOM, on page load and resize.
 
 #
 
@@ -17,9 +17,58 @@ More info on **@build-in-blocks** framework libraries in general can be found at
 
 #
 
-### Heading 1
+### Swaping `_replacesibling` and `_refelem` elements
 
+Syntax:
 
-#
+````html
+<div _refelem="refElemUniqueNameID">Sibling element 1</div>
+<div _replacesibling="refElemUniqueNameID" _atsize="1">Sibling element 2</div>
+````
 
-### Heading 2 etc.
+There are other device size attribute types apart from `_atsize`. See table below:
+
+<table>
+  <tr>
+    <th>Device size attribute type</th>
+    <th>Example code usage</th>
+  </tr>
+  <tr>
+    <td><code>_atsize</code></td>
+    <td>
+
+````html
+<div _replacesibling="refElemUniqueNameID" _atsize="1">Sibling element 2</div>
+````
+</td>
+  </tr>
+    <tr>
+    <td><code>_uptosize</code></td>
+    <td>
+
+````html
+<div _replacesibling="refElemUniqueNameID" _uptosize="2">Sibling element 2</div>
+````
+</td>
+  </tr>
+  </tr>
+    <tr>
+    <td><code>_fromsize</code></td>
+    <td>
+
+````html
+<div _replacesibling="refElemUniqueNameID" _fromsize="2">Sibling element 2</div>
+````
+</td>
+  </tr>
+  </tr>
+    <tr>
+    <td><code>_withinsizerange</code></td>
+    <td>
+
+````html
+<div _replacesibling="refElemUniqueNameID" _withinsizerange="2-4">Sibling element 2</div>
+````
+</td>
+  </tr>
+</table>

@@ -17,15 +17,15 @@
 
 #
 
-**Supported Node.js versions:** Node.js v20.x, v22.x, v24.x and v25.x - Monitored by central Blocks CI from [@build-in-blocks/dev.setup](https://www.npmjs.com/package/@build-in-blocks/dev.setup)
+**Supported Node.js versions:** Node.js v20.x, v22.x, v24.x and v25.x
 
 #
 
-**Overview:** TODO - Add overview.
+**Overview:** Intuitive DOM manipulation for your `typescript` web app projects.
 
 #
 
-**Description:** TODO - Add description.
+**Description:** The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for adding and removing elements from the DOM, on page load and resize.
 
 #
 
@@ -45,11 +45,13 @@
 
 #### 1. Main package installation
 
-- Install and setup [@build-in-blocks/dev.build](https://www.npmjs.com/package/@build-in-blocks/dev.build) and [@build-in-blocks/dev.setup](https://www.npmjs.com/package/@build-in-blocks/dev.setup) in your typescript web app project.
+- Needed: Install and setup [@build-in-blocks/dev.build](https://www.npmjs.com/package/@build-in-blocks/dev.build) in your typescript web app project.
 
-- Install our dom autoquery package as a `devDependency` in your typescript web app project:
+- Optional: Install and setup [@build-in-blocks/dev.setup](https://www.npmjs.com/package/@build-in-blocks/dev.setup) in your typescript web app project.
 
-  ````
+- Install the dom autoquery package as a `devDependency` in your typescript web app project:
+
+  ````bash
   npm install -D @build-in-blocks/dom.autoquery --save-exact
   ````
 
@@ -59,30 +61,24 @@ Since you are to use both this library and [@build-in-blocks/dev.build](https://
 
 See `typescript` table in the general guide for more information: [Typescript compatibility and usage](https://github.com/build-in-blocks/.github/wiki/Repo-User-Guide-Extension#table-typescript-compatibility-and-usage).
 
-#### 3. TODO: Add DOM.autoquery usage
-
-TODO: Add usage example
-
-<!-- 
-
-#### 3. Initialize `dom.autoquery` devices
+#### 3. Initialize your app's device screen sizes
 
 In your `index.ts` file (or whatever your app's entry point `.ts` file is named), import the `DOMautoquery` object, call and use the `.devices` method to specify the range of device sizes that you want your app to cater for.
 
 For example:
 
-````
+````ts
 import { DOMautoquery } from '@build-in-blocks/dom.autoquery';
 
 DOMautoquery.devices({
-    unit: 'px',
-    sizes: {
-        1: { name: 'mobile', startPoint: 0},
-        2: { name: 'tablet', startPoint: 768 },
-        3: { name: 'desktop', startPoint: 1024 },
-        4: { name: 'wide', startPoint: 1280 },
-        5: { name: 'ultraWide', startPoint: 1600 },
-    }
+  unit: 'px', // default unit is 'px', if you don't specify the unit
+  sizes: {
+    1: { name: 'mobile', startPoint: 0},
+    2: { name: 'tablet', startPoint: 768 },
+    3: { name: 'desktop', startPoint: 1024 },
+    4: { name: 'wide', startPoint: 1280 },
+    5: { name: 'ultraWide', startPoint: 1600 },
+  },
 });
 ````
 
@@ -90,7 +86,7 @@ DOMautoquery.devices({
 
 For example, copy this code and add it in your `index.html`. Then resize your web browser to see the html element swap take place.
 
-````
+````html
 <header>
   <nav _refelem="navElem">
     <a href="#">Home</a>
@@ -102,10 +98,7 @@ For example, copy this code and add it in your `index.html`. Then resize your we
 ````
 
 > [!NOTE]  
-> Visit the user guide link (towards the top  👆🏽 of this README) to see the full list of HTML attribute commands available, and why we recommend using this library together with the **@build-in-blocks/dev.build** library.
-
--->
-
+> Visit the user guide link (towards the top  👆🏽 of this README) to see the full list of HTML attribute commands available.
 
 #
 
