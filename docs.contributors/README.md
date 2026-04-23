@@ -60,6 +60,12 @@ Follow the instructions to fork and clone this repository locally unto your comp
     npm link
     ````
 
+    Any time you make changes to code from this library, run this script command to make it accessible to the typescript web app that you're testing with:
+
+    ````bash
+    npm run build
+    ````
+
 - **For your typescript web app:** Open a terminal specifically for your typescript web app, `cd` into the root of your typescript web app.
     - **Step 1:** First install the npm dependencies in your typescript web app.
     - **Step 2:** Add this to your typescript web app's `package.json` dependencies (take note incase library version changes in the future: use the exact version number in the `@build-in-blocks/dom.autoquery` library's `package.json`. At the time of writing, it is 1.0.0):
