@@ -1,3 +1,5 @@
+import { _default } from '@_helpers/var.root';
+//-
 import { DeviceSizeBreakpointModified, ActiveDevice } from '@_types/modified.types';
 import { DOMautoqueryDevices } from '@_types/user.app.types';
 
@@ -5,7 +7,7 @@ export const breakpointsWatcher = (devices: DOMautoqueryDevices, callback: (acti
   // ----------------------------------------------------
   // Default to 'px' if unit is not specified by dev user
   // ----------------------------------------------------
-  devices.unit = devices.unit || 'px';
+  devices.unit = devices.unit || _default.deviceUnit;
   //--------------------------------------------------------------------------
   // Convert object to a sorted array to ensure we calculate ranges correctly
   //--------------------------------------------------------------------------

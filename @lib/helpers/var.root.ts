@@ -1,4 +1,8 @@
-import { InstructionAttr, RefElemAttribute, SwapSize } from '@_types/var.types';
+import { _Default, InstructionAttr, RefElemAttribute, SwapSize } from '@_types/var.types';
+
+export const _default: _Default = {
+  deviceUnit: 'px',
+};
 
 export const refElemAttribute: RefElemAttribute = '_refelem';
 

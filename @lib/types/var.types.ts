@@ -1,3 +1,7 @@
+export interface _Default {
+  deviceUnit: 'px';
+}
+
 export type RefElemAttribute = '_refelem';
 
 export interface InstructionAttr {
