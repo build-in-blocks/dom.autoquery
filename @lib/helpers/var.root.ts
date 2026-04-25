@@ -1,11 +1,13 @@
-export const refElemAttribute = '_refelem';
+import { InstructionAttr, RefElemAttribute, SwapSize } from '@_types/var.types';
 
-export const instructionAttribute = {
+export const refElemAttribute: RefElemAttribute = '_refelem';
+
+export const instructionAttribute: InstructionAttr = {
   replaceRef: '_replaceref',
   replaceSibling: '_replacesibling',
 };
 
-export const swapsize = {
+export const swapsize: SwapSize = {
   AT: '_atsize',
   UPTO: '_uptosize',
   FROM: '_fromsize',
