@@ -1,7 +1,7 @@
-import { performRefSwap } from '@_queries/logic.swap';
+import { performRefSwap } from '@_queries/replaceref.swap';
 //-
 import { domState } from '@_helpers/state/dom.state';
-import { instructionAttribute, refElemAttribute, swapsize } from '@_helpers/var.root';
+import { refElemAttribute, swapsize } from '@_helpers/var.root';
 //-
 import { SwapObject } from '@_types/queries.types';
 import { ActiveDevice } from '@_types/modified.types';
@@ -9,11 +9,11 @@ import { ActiveDevice } from '@_types/modified.types';
 // ------------------------------------------------------------------------
 // INITIALIZATION: Build swap state in clientState BEFORE starting watchers
 // ------------------------------------------------------------------------
-export const initializeRefSwap = ({ activeDevice, deviceSizeAttributeType }: { activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
-  const replacerElems = document.querySelectorAll(`[${instructionAttribute.replaceRef}][${deviceSizeAttributeType}]`);
+export const initializeRefSwap = ({ _instructionAttribute, activeDevice, deviceSizeAttributeType }: { _instructionAttribute: '_replaceref' | '_replacesibling'; activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
+  const replacerElems = document.querySelectorAll(`[${_instructionAttribute}][${deviceSizeAttributeType}]`);
   //-
   replacerElems.forEach((replacerElem) => {
-    const refAttribute = replacerElem.getAttribute(instructionAttribute.replaceRef);
+    const refAttribute = replacerElem.getAttribute(_instructionAttribute);
     const refelem = document.querySelector(`[${refElemAttribute}="${refAttribute}"]`);
     //-
     if (refelem) {
@@ -74,7 +74,7 @@ export const initializeRefSwap = ({ activeDevice, deviceSizeAttributeType }: { a
       //---------------------------------
       // Initial swapping of DOM elements
       //---------------------------------
-      performRefSwap({ on: 'pageLoad', activeDevice, deviceSizeAttributeType });
+      performRefSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
     }
   });
 };

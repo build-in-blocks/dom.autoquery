@@ -1,9 +1,9 @@
-import { instructionAttribute, refElemAttribute } from '@_helpers/var.root';
+import { refElemAttribute } from '@_helpers/var.root';
 import { domState } from '@_helpers/state/dom.state';
 //-
 import { ActiveDevice } from '@_types/modified.types';
 
-export const performRefSwap = ({ on, activeDevice, deviceSizeAttributeType }: { on: 'pageLoad' | 'pageResize'; activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
+export const performRefSwap = ({ on, _instructionAttribute, activeDevice, deviceSizeAttributeType }: { on: 'pageLoad' | 'pageResize'; _instructionAttribute: '_replaceref' | '_replacesibling'; activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
   Object.values(domState.result).forEach((item) => {
     // ----------------------------------------------------------------
     // Filter to only items that have specified deviceSizeAttributeType
@@ -29,7 +29,7 @@ export const performRefSwap = ({ on, activeDevice, deviceSizeAttributeType }: { 
     const activeReplacerPairSwapItem = shouldShowReplacerElem ? _replacerElem : refelem;
     const activeRefPairSwapItem = shouldShowReplacerElem ? refelem : _replacerElem;
     //-
-    const isValidReplaceRefSwapAttributeAndID = ({ attr }: { attr: Attr }) => attr.value === _refAttribute && (attr.name === refElemAttribute || attr.name === instructionAttribute.replaceRef);
+    const isValidReplaceRefSwapAttributeAndID = ({ attr }: { attr: Attr }) => attr.value === _refAttribute && (attr.name === refElemAttribute || attr.name === _instructionAttribute);
     //-
     const activeReplacerPairSwapItemAttrValue = Array.from(activeReplacerPairSwapItem.attributes).find((attr) => isValidReplaceRefSwapAttributeAndID({ attr }));
     const activeRefPairSwapItemAttrValue = Array.from(activeRefPairSwapItem.attributes).find((attr) => isValidReplaceRefSwapAttributeAndID({ attr }));

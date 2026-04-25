@@ -1,18 +1,21 @@
+import { performSiblingSwap } from '@_queries/replacesibling.swap';
+//-
 import { domState } from '@_helpers/state/dom.state';
-import { instructionAttribute, refElemAttribute, swapsize } from '@_helpers/var.root';
+import { refElemAttribute, swapsize } from '@_helpers/var.root';
 //-
 import { SwapObject } from '@_types/queries.types';
+import { ActiveDevice } from '@_types/modified.types';
 
 // ------------------------------------------------------------------------
 // INITIALIZATION: Build swap state in clientState BEFORE starting watchers
 // ------------------------------------------------------------------------
-export const initializeSiblingSwap = ({ deviceSizeAttributeType }: { deviceSizeAttributeType: string }) => {
-  const replacerElems = document.querySelectorAll(`[${instructionAttribute.replaceSibling}][${deviceSizeAttributeType}]`);
-
+export const initializeSiblingSwap = ({ _instructionAttribute, activeDevice, deviceSizeAttributeType }: { _instructionAttribute: '_replaceref' | '_replacesibling'; activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
+  const replacerElems = document.querySelectorAll(`[${_instructionAttribute}][${deviceSizeAttributeType}]`);
+  //-
   replacerElems.forEach((replacerElem) => {
-    const refAttribute = replacerElem.getAttribute(instructionAttribute.replaceSibling);
+    const refAttribute = replacerElem.getAttribute(_instructionAttribute);
     const refelem = document.querySelector(`[${refElemAttribute}="${refAttribute}"]`);
-
+    //-
     if (refelem) {
       //---------------------------------------------------------
       // Store swap data in clientState with insertion point info
@@ -20,8 +23,6 @@ export const initializeSiblingSwap = ({ deviceSizeAttributeType }: { deviceSizeA
       let swapObj: SwapObject = {
         refelem,
         _replacerElem: replacerElem,
-        _parentElem: refelem.parentNode,
-        _nextSiblingElem: refelem.nextSibling,
         _refAttribute: refAttribute,
         _sizeAttributeType: deviceSizeAttributeType,
       };
@@ -70,10 +71,10 @@ export const initializeSiblingSwap = ({ deviceSizeAttributeType }: { deviceSizeA
       // Update domState
       //----------------
       domState.update(`${refAttribute}_${deviceSizeAttributeType}`, swapObj);
-      //---------------------------------------------------------
-      // Remove replacer from DOM - we'll add it back when needed
-      //---------------------------------------------------------
-      replacerElem.remove();
+      //---------------------------------
+      // Initial swapping of DOM elements
+      //---------------------------------
+      performSiblingSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
     }
   });
 };
