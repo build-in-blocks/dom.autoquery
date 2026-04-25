@@ -1,5 +1,3 @@
-import { performRefSwap } from '@_queries/replaceref.swap';
-//-
 import { domState } from '@_helpers/state/dom.state';
 import { refElemAttribute, swapsize } from '@_helpers/var.root';
 //-
@@ -74,7 +72,15 @@ export const initializeRefSwap = ({ _instructionAttribute, activeDevice, deviceS
       //---------------------------------
       // Initial swapping of DOM elements
       //---------------------------------
-      performRefSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
+      (async () => {
+        const { performRefSwap } = await import(
+          /* webpackChunkName: "autoq.swap._rr" */
+          /* webpackExclude: /\.d\.ts$/ */
+          '@_queries/replaceref.swap'
+        );
+        //-
+        performRefSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
+      })();
     }
   });
 };

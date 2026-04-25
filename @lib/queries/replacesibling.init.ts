@@ -1,5 +1,3 @@
-import { performSiblingSwap } from '@_queries/replacesibling.swap';
-//-
 import { domState } from '@_helpers/state/dom.state';
 import { refElemAttribute, swapsize } from '@_helpers/var.root';
 //-
@@ -74,7 +72,15 @@ export const initializeSiblingSwap = ({ _instructionAttribute, activeDevice, dev
       //---------------------------------
       // Initial swapping of DOM elements
       //---------------------------------
-      performSiblingSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
+      (async () => {
+        const { performSiblingSwap } = await import(
+          /* webpackChunkName: "autoq.swap._rs" */
+          /* webpackExclude: /\.d\.ts$/ */
+          '@_queries/replacesibling.swap'
+        );
+        //-
+        performSiblingSwap({ on: 'pageLoad', _instructionAttribute, activeDevice, deviceSizeAttributeType });
+      })();
     }
   });
 };
