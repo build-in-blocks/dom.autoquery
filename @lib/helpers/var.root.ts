@@ -1,6 +1,7 @@
 export const refElemAttribute = '_refelem';
 
 export const instructionAttribute = {
+  replaceRef: '_replaceref',
   replaceSibling: '_replacesibling',
 };
 

@@ -1,5 +1,7 @@
 import { breakpointsWatcher } from '@_watcher/breakpoints.watcher';
-import { initBeforeWatch } from '@_watcher/init.before.watcher';
+//-
+import { initializeRefSwap } from '@_queries/replaceref.init';
+import { performRefSwap } from '@_queries/logic.swap';
 //-
 import { deviceSizeAttributeTypes } from '@_helpers/var.derived';
 //-
@@ -8,27 +10,18 @@ import { DOMautoqueryDevices } from '@_types/user.app.types';
 
 export const DOMautoquery = {
   devices: (_devices: DOMautoqueryDevices) => {
-    //---------------------------------
-    // Intial element swap on page load
-    //---------------------------------
-    initBeforeWatch();
-    //-----------------------
-    // Use breakpoint watcher
-    //-----------------------
+    //--------------------------------------------------------
+    // Use breakpoint watcher | Watch on page load & on resize
+    //--------------------------------------------------------
     breakpointsWatcher(_devices, (activeDevice: ActiveDevice) => {
-      console.clear();
-      console.log('Active Device:', activeDevice);
-
+      document.addEventListener('DOMContentLoaded', () => {
+        deviceSizeAttributeTypes.forEach((deviceSizeAttributeType) => {
+          initializeRefSwap({ activeDevice, deviceSizeAttributeType });
+        });
+      });
+      //-
       deviceSizeAttributeTypes.forEach((deviceSizeAttributeType) => {
-        (async () => {
-          const { performSiblingSwap } = await import(
-            /* webpackChunkName: "autoq._rs" */
-            /* webpackExclude: /\.d\.ts$/ */
-            '@_queries/replacesibling.swap'
-          );
-          //-
-          performSiblingSwap({ activeDevice, deviceSizeAttributeType });
-        })();
+        performRefSwap({ on: 'pageResize', activeDevice, deviceSizeAttributeType });
       });
     });
   },
