@@ -1,7 +1,7 @@
 
 # User guide: Package installation, setup and usage
 
-The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for adding and removing elements from the DOM, on page load and resize.
+The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for dynamically swapping, adding and/or removing elements from the DOM on page load and on resize.
 
 #
 
@@ -28,6 +28,9 @@ Here's an example where the preference is the `em` unit:
 import { DOMautoquery } from '@build-in-blocks/dom.autoquery';
 
 DOMautoquery.devices({
+  //-------------
+  // Specify unit
+  //-------------
   unit: 'em',
   //-------------------------------------------------------
   // Specify as little or as much device sizes as you need.
@@ -37,6 +40,8 @@ DOMautoquery.devices({
     1: { name: 'small', startPoint: 0},
     2: { name: 'medium', startPoint: 48 },
     3: { name: 'large', startPoint: 64 },
+    4: { name: 'xLarge', startPoint: 80 },
+    5: { name: 'xxLarge', startPoint: 100 },
   },
 });
 ````

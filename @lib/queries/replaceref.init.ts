@@ -4,9 +4,9 @@ import { refElemAttribute, swapsize } from '@_helpers/var.root';
 import { SwapObject } from '@_types/queries.types';
 import { ActiveDevice } from '@_types/modified.types';
 
-// ------------------------------------------------------------------------
-// INITIALIZATION: Build swap state in clientState BEFORE starting watchers
-// ------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
+// INITIALIZATION: Update domState, dynamically detect & swap DOM elements on page load
+// ------------------------------------------------------------------------------------
 export const initializeRefSwap = ({ _instructionAttribute, activeDevice, deviceSizeAttributeType }: { _instructionAttribute: '_replaceref' | '_replacesibling'; activeDevice: ActiveDevice; deviceSizeAttributeType: string }) => {
   const replacerElems = document.querySelectorAll(`[${_instructionAttribute}][${deviceSizeAttributeType}]`);
   //-
@@ -15,9 +15,9 @@ export const initializeRefSwap = ({ _instructionAttribute, activeDevice, deviceS
     const refelem = document.querySelector(`[${refElemAttribute}="${refAttribute}"]`);
     //-
     if (refelem) {
-      //---------------------------------------------------------
-      // Store swap data in clientState with insertion point info
-      //---------------------------------------------------------
+      //------------------------------------------------------
+      // Store swap data in domState with insertion point info
+      //------------------------------------------------------
       let swapObj: SwapObject = {
         refelem,
         _replacerElem: replacerElem,

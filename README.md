@@ -25,7 +25,7 @@
 
 #
 
-**Description:** The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for adding and removing elements from the DOM, on page load and resize.
+**Description:** The **@build-in-blocks/dom.autoquery** package provides HTML attributes that work like commands, providing clear instructions for dynamically swapping, adding and/or removing elements from the DOM on page load and on resize.
 
 #
 
@@ -100,8 +100,9 @@ For example, copy this code and add it in your `index.html`. Then resize your we
 </header>
 ````
 
-> [!NOTE]  
-> Visit the user guide link (towards the top  👆🏽 of this README) to see the full list of HTML attribute commands available.
+#### 5. Explore more HTML attribute commands
+
+Visit the **user guide** link (towards the top 👆🏽 of this README) to see the full list of HTML attribute commands available.
 
 #
 

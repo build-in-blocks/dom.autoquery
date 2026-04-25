@@ -82,6 +82,9 @@ Follow the instructions to fork and clone this repository locally unto your comp
 
     - **Step 3:** Follow the usage instructions in the [root README.md](https://github.com/build-in-blocks/dom.autoquery), not from the beginning though; start from the **2. Do I need to install `typescript`?** section (and continue till the end).
 
+        > [!NOTE]  
+        > Your user app also needs to have **@build-in-blocks/dev.build** installed from npm or linked locally.
+
 #
 
 ### Contributors
