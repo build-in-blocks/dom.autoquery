@@ -19,9 +19,9 @@
   },
   "scripts": {
     "build": "blocks.pkg.dev.build lib:build",
+    "prepare": "blocks.pkg.dev.setup dev:husky:setup:git",
     "eslint:lint": "eslint .",
-    "prettier:format": "prettier --write \"**/*.{mjs,ts,js,json,html,css,scss}\"",
-    "prepare": "blocks.pkg.dev.setup dev:husky:setup:git"
+    "prettier:format": "prettier --write \"**/*.{mjs,ts,js,json,html,css,scss}\""
   },
   "devDependencies": {
     "@build-in-blocks/dev.resources": "1.0.4",

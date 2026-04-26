@@ -49,7 +49,7 @@
 
 - Optional: Install and setup [@build-in-blocks/dev.setup](https://www.npmjs.com/package/@build-in-blocks/dev.setup) in your typescript web app project.
 
-- Install the dom autoquery package as a `devDependency` in your typescript web app project:
+- Needed: Install the dom autoquery package as a `devDependency` in your typescript web app project:
 
   ````bash
   npm install -D @build-in-blocks/dom.autoquery --save-exact

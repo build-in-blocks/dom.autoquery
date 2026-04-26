@@ -14,7 +14,7 @@
 #### This library
 
 - This library requires you to build/generate a new bundle for consumption - Don't forget to run the `build` script command before publishing.
-- Don't forget to include or add all needed folders & files in production to the `package.json`'s `files array` before publishing.
+- Don't forget to include or add all needed folders & files **in production** to the `package.json`'s `files array` before publishing.
 
 #
 
