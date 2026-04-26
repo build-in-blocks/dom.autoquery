@@ -5,14 +5,15 @@
   "type": "module",
   "sideEffects": false,
   "main": "./build/index.js",
-  "module": "./dist.prod/index.js",
+  "module": "./build/index.js",
   "types": "./build/index.d.ts",
   "exports": {
     ".": {
       "types": "./build/index.d.ts",
       "import": "./build/index.js",
       "module": "./build/index.js"
-    }
+    },
+    "./dist.prod/*": "./dist.prod/*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
