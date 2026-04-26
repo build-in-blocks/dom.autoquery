@@ -37,7 +37,7 @@ export const performRefSwap = ({ on, _instructionAttribute, activeDevice, device
     const activeReplacerPairAnchorDetails = `${activeReplacerPairSwapItemAttrValue?.name}="${activeReplacerPairSwapItemAttrValue?.value}"`;
     const activeRefPairAnchorDetails = `${activeRefPairSwapItemAttrValue?.name}="${activeRefPairSwapItemAttrValue?.value}"`;
     //-
-    const activeRefPairAnchor = `<autoq ${activeRefPairAnchorDetails}><b>ANCHOR</b> i.e. <b>${activeRefPairSwapItemAttrValue?.name}</b> is ACTIVE</autoq>`;
+    const activeRefPairAnchor = `<autoq ${activeRefPairAnchorDetails}></autoq>`;
 
     //--------------------------------
     // Actual swapping of DOM elements
