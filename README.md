@@ -1,12 +1,5 @@
 # @build-in-blocks/dom.autoquery
 
-> [!NOTE]  
-> Not yet on NPM. To be released in the current sprint's release window i.e. **April 13 - April 26, 2026**. The code and documentation should have been merged by then for you to access.
->
-> You can follow the progress through the ongoing pull request, or via the release & sprint planning tab of this GitHub project board: https://github.com/orgs/build-in-blocks/projects/2/views/6
-
-#
-
 ![Latest Version](https://img.shields.io/npm/v/@build-in-blocks/dom.autoquery.svg?label=latest&color=brightgreen&style=flat-square) ![NPM Downloads](https://img.shields.io/npm/d18m/%40build-in-blocks%2Fdom.autoquery?color=blue&label=downloads%20(last%2018%20months)) ![build passing](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square&label=Blocks%20CI)
 
 [![License: AGPL v3.0](https://img.shields.io/badge/license-AGPL%20v3.0-blue.svg?style=flat-square)](https://www.gnu.org/licenses/agpl-3.0) [![All Contributors](https://img.shields.io/github/all-contributors/build-in-blocks/dom.autoquery?color=ee8449&style=flat-square)](#contributors) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/build-in-blocks/dom.autoquery/blob/develop/docs.contributors/README.md)
