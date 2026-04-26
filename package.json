@@ -24,6 +24,7 @@
     "prettier:format": "prettier --write \"**/*.{mjs,ts,js,json,html,css,scss}\""
   },
   "devDependencies": {
+    "@build-in-blocks/dev.build": "1.0.7",
     "@build-in-blocks/dev.resources": "1.0.4",
     "@build-in-blocks/dev.setup": "1.0.5"
   },
