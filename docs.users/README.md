@@ -50,11 +50,13 @@ DOMautoquery.devices({
 
 ### Swaping `_replaceref` and `_refelem` elements
 
-Syntax:
+**Description:** This HTML attribute command pair dynamically swaps HTML elements (that are not immediate sibling elements) on page load and on page resize. For example, swapping your app's `sidebar` (which is only meant to show up on larger devices) with a `bottom navigation menu` (which is a different version of your sidebar that should only show up on smaller devices).
+
+**Syntax:**
 
 ````html
-<div _refelem="refElemUniqueNameID">Sibling element 1</div>
-<div _replaceref="refElemUniqueNameID" _atsize="1">Sibling element 2</div>
+<div _refelem="refElemUniqueNameID">Element 1</div>
+<div _replaceref="refElemUniqueNameID" _atsize="1">Element 2</div>
 ````
 
 There are other device size attribute types apart from `_atsize`. See table below:
@@ -69,7 +71,7 @@ There are other device size attribute types apart from `_atsize`. See table belo
     <td>
 
 ````html
-<div _replaceref="refElemUniqueNameID" _atsize="1">Sibling element 2</div>
+<div _replaceref="refElemUniqueNameID" _atsize="1">Element 2</div>
 ````
 </td>
   </tr>
@@ -78,7 +80,7 @@ There are other device size attribute types apart from `_atsize`. See table belo
     <td>
 
 ````html
-<div _replaceref="refElemUniqueNameID" _uptosize="2">Sibling element 2</div>
+<div _replaceref="refElemUniqueNameID" _uptosize="2">Element 2</div>
 ````
 </td>
   </tr>
@@ -88,7 +90,7 @@ There are other device size attribute types apart from `_atsize`. See table belo
     <td>
 
 ````html
-<div _replaceref="refElemUniqueNameID" _fromsize="2">Sibling element 2</div>
+<div _replaceref="refElemUniqueNameID" _fromsize="2">Element 2</div>
 ````
 </td>
   </tr>
@@ -98,7 +100,7 @@ There are other device size attribute types apart from `_atsize`. See table belo
     <td>
 
 ````html
-<div _replaceref="refElemUniqueNameID" _withinsizerange="2-4">Sibling element 2</div>
+<div _replaceref="refElemUniqueNameID" _withinsizerange="2-4">Element 2</div>
 ````
 </td>
   </tr>
@@ -109,7 +111,9 @@ There are other device size attribute types apart from `_atsize`. See table belo
 
 ### Swaping `_replacesibling` and `_refelem` elements
 
-Syntax:
+**Description:** This HTML attribute command pair dynamically swaps immediate sibling HTML elements on page load and on page resize. The code snippet featuring a `nav` and a `button` immediate sibling elements that share the same `header` parent, is a good example. 
+
+**Syntax:**
 
 ````html
 <div _refelem="refElemUniqueNameID">Sibling element 1</div>
