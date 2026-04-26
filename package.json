@@ -1,6 +1,6 @@
 {
   "name": "@build-in-blocks/dom.autoquery",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Intuitive DOM manipulation for your typescript web app projects.",
   "type": "module",
   "sideEffects": false,
