@@ -56,6 +56,7 @@ DOMautoquery.devices({
 
 ````html
 <div _refelem="refElemUniqueNameID">Element 1</div>
+<!-- Some other HTML element(s) separating them are here -->
 <div _replaceref="refElemUniqueNameID" _atsize="1">Element 2</div>
 ````
 
@@ -111,7 +112,7 @@ There are other device size attribute types apart from `_atsize`. See table belo
 
 ### Swaping `_replacesibling` and `_refelem` elements
 
-**Description:** This HTML attribute command pair dynamically swaps immediate sibling HTML elements on page load and on page resize. The code snippet featuring a `nav` and a `button` immediate sibling elements that share the same `header` parent, is a good example. 
+**Description:** This HTML attribute command pair dynamically swaps immediate sibling HTML elements on page load and on page resize. The code snippet on the root README featuring a `nav` and a `button` immediate sibling elements that share the same `header` parent, is a good example. 
 
 **Syntax:**
 
