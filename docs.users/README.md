@@ -48,9 +48,11 @@ DOMautoquery.devices({
 
 #
 
-### Swaping `_replaceref` and `_refelem` elements
+### Swapping `_replaceref` and `_refelem` elements
 
-**Description:** This HTML attribute command pair dynamically swaps HTML elements (that are not immediate sibling elements) on page load and on page resize. For example, swapping your app's `sidebar` (which is only meant to show up on larger devices) with a `bottom navigation menu` (which is a different version of your sidebar that should only show up on smaller devices).
+**Description:** This HTML attribute command pair dynamically swaps HTML elements (that are not immediate sibling elements) on page load and on page resize.
+
+**Accessibility-oriented use case example:** An HTML element (or different versions of it) needs to be in different locations on the page for different device sizes (or size range), without breaking page elements flow.
 
 **Syntax:**
 
@@ -110,9 +112,11 @@ There are other device size attribute types apart from `_atsize`. See table belo
 
 #
 
-### Swaping `_replacesibling` and `_refelem` elements
+### Swapping `_replacesibling` and `_refelem` elements
 
-**Description:** This HTML attribute command pair dynamically swaps immediate sibling HTML elements on page load and on page resize. The code snippet on the root README featuring a `nav` and a `button` immediate sibling elements that share the same `header` parent, is a good example. 
+**Description:** This HTML attribute command pair dynamically swaps immediate sibling HTML elements on page load and on page resize.
+
+**Accessibility-oriented use case example:** Immediate sibling HTML elements that shouldn't or don't need to be present in the DOM/page at the same time on a single device size (or size range).
 
 **Syntax:**
 
