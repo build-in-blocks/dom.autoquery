@@ -14,7 +14,7 @@
 
 #
 
-**Overview:** Intuitive DOM manipulation for your `typescript` web app projects.
+**Overview:** Intuitive accessibility-oriented DOM manipulation for your `typescript` web app projects.
 
 #
 

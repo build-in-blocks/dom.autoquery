@@ -1,7 +1,7 @@
 {
   "name": "@build-in-blocks/dom.autoquery",
   "version": "1.0.1",
-  "description": "Intuitive DOM manipulation for your typescript web app projects.",
+  "description": "Intuitive accessibility-oriented DOM manipulation for your typescript web app projects.",
   "type": "module",
   "sideEffects": false,
   "main": "./build/index.js",
@@ -69,7 +69,8 @@
     "dom manipulation",
     "html",
     "html attribute",
-    "html attribute command"
+    "html attribute command",
+    "accessibility"
   ],
   "files": [
     "build/",
